@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fkrpl</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #131415; color: #fff; margin: 0; padding: 20px; text-align: center; user-select: none; }
+        .header h1 { font-size: 22px; color: #f5a623; margin: 0 0 5px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 10px; max-width: 400px; margin: 0 auto 30px auto; }
+        .card { aspect-ratio: 1; background: #242526; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; cursor: pointer; border: 2px solid #3a3b3c; transition: transform 0.1s; }
+        .card:active { transform: scale(0.95); }
+        .card.revealed-win { background: #27ae60; border-color: #2ecc71; }
+        .card.revealed-lose { background: #c0392b; border-color: #e74c3c; opacity: 0.6; }
+        .ads { background: #1c1d1e; padding: 15px; border-radius: 12px; border: 1px dashed #f5a623; max-width: 400px; margin: 20px auto; }
+        .ads a { color: #f5a623; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="prize-title">Приз</h1>
+        <p id="status-text">Выбери карточку!</p>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="ads">🔥 Разработано для <a href="https://t.me/fkrpl" target="_blank">@fkrpl</a></div>
+    <script src="app.js"></script>
+</body>
+</html>
